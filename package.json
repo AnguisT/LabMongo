@@ -9,9 +9,11 @@
   "author": "vlad",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "moment": "^2.18.1",
-    "mongoose": "^4.9.6"
+    "mongoose": "^4.9.6",
+    "mongoose-auto-increment": "^5.0.1"
   },
   "description": ""
 }

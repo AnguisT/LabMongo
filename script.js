@@ -2,11 +2,21 @@ $(document).ready(function() {
     $('#time').click(function() {
         $.get('/api/time', function(data) {
             $('#timeResult').html(data.timeNow);
-        })
+        });
     });
-    $('#lib').click(function () {
-        $.get('/api/lib', function (data) {
-            $('#libResult').html(data.li)
-        })
-    })
+    // $('#List').click(function() {
+    //     $.ajax({
+    //         url: "/api/v1/listlibrary",
+    //         type: "GET",
+    //         contentType: "application/json",
+    //         success: function (libr) {
+    //             var rows = "";
+    //             $.each(libr, function (index, lib) {
+    //                 // добавляем полученные элементы в таблицу
+    //                 rows += lib;
+    //             });
+    //             $("#result").append(rows);
+    //         }
+    //     });
+    // });
 });
