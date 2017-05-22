@@ -41,8 +41,7 @@ router.post('/v1/book', function (req, res) {
 
 router.delete('/v1/book/:id', function (req, res) {
     var id = req.params.id;
-    var book = req.body;
-    api.deletebook(id, book).then(function (data) {
+    api.deletebook(id).then(function (data) {
         res.json(data);
     });
 });

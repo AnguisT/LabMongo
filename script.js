@@ -21,14 +21,14 @@ $(document).ready(function() {
                 });
                 $('.deleteBook').click(function() {
                     var id = $(this).attr('name');
-                    var titlebook = $("[name = titlebook][id = " + id + "]").val();
-                    var book = {titleb: titlebook};
+                    // var titlebook = $("[name = titlebook][id = " + id + "]").val();
+                    // var book = {titleb: titlebook};
                     $.ajax({
                         url: '/api/v1/book/' + id,
                         type: 'DELETE',
                         contentType: "application/json",
-                        data: JSON.stringify(book),
-                        dataType: "json",
+                        // data: JSON.stringify(book),
+                        // dataType: "json",
                         success: function (result) {
                             alert("You deleted book");
                         }

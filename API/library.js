@@ -38,8 +38,8 @@ function addBook(data) {
     return getBooks();
 }
 
-function deleteBook(id, bookOne) {
-    shelvings.findOneAndUpdate({}, {$pull: {books: {title: bookOne.titleb}}}, function (err) {
+function deleteBook(id) {
+    shelvings.findOneAndUpdate({}, {$pull: {books: {idBook: id}}}, function (err) {
         if (err) {
             console.log(err.message);
         } else {
