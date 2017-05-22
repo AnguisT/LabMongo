@@ -7,19 +7,21 @@
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-    <a id="library" href="/api/v1/listlibrary">Список библиотек</a>
-    <a href="./html/addbook.html">Добавить новую библеиотеку</a>
-    <h1>Hello world!</h1>
-    <form method="POST" action="/api/v1/book">
-        Название книги: <input name="titlebook" type="text"/>
+    <button type="button" id="book">Список книг</button>
+    <div id="listbook">
+    </div>
+    <div id="detailbook">
+    </div>
+    <form id="addBook" method="post">
+        Название книги: <input name="titleb" type="text"/>
         <br><br>
-        Автор книги: <input name="authorbook" type="text"/>
+        Автор книги: <input name="authorb" type="text"/>
         <br><br>
-        Количество страниц: <input name="numberpages" type="text"/>
+        Количество страниц: <input name="numberpagesb" type="text"/>
         <br><br>
-        Тираж книги: <input name="circulation" type="text"/>
+        Тираж книги: <input name="circulationb" type="text"/>
         <br><br>
-        Дата написания книги: <input name="datewrit" type="date"/>
+        Дата написания книги: <input name="datewritb" type="date"/>
         <br><br>
         Жанр книги: <input name="genrebook" type="text"/>
         <br><br>
