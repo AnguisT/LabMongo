@@ -57,7 +57,7 @@ function deleteBook(id) {
 }
 
 function updateBook(id, data) {
-    book.findOneAndUpdate({idBook: id}, {$set: {title: data.titleb, author: data.authorb, circulations: data.circul, numberPages: data.numberpage, dateWriting: data.dateWrit}}, {upsert: true, new: true}, function (err) {
+    book.findOneAndUpdate({idBook: id}, {$set: {title: data.titleb, author: data.authorb, circulations: data.circul, numberPages: data.numberPage, dateWriting: data.dateWrit}}, {upsert: true, new: true}, function (err) {
         if (err) {
             console.log(err);
         } else {

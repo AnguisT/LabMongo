@@ -5,6 +5,14 @@ var bodyParser = require('body-parser');
 var app = express();
 var router = express.Router();
 
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
+
 app.use(express.static(__dirname + '/'));
 app.use(bodyParser.json());
 app.use('/api', router);
@@ -34,8 +42,9 @@ router.get('/v1/book/:id', function (req, res) {
 
 router.post('/v1/book', function (req, res) {
     var book = req.body;
+    console.log(book);
     api.addbook(book).then(function (data) {
-        res.status(201).json(data);
+        res.json(data);
     });
 });
 

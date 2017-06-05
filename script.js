@@ -36,6 +36,7 @@ $(document).ready(function() {
                 });
                 $('.updateBook').click(function () {
                     var id = $(this).attr('name');
+                    var booki = $(this).parent().find($("[name = titlebook]").val());
                     var titlebook = $("[name = titlebook][id = " + id + "]").val();
                     var authorbook = $("[name = authorbook][id = " + id + "]").val();
                     var numberpages = $("[name = numberpages][id = " + id + "]").val();
@@ -45,7 +46,7 @@ $(document).ready(function() {
                         titleb: titlebook,
                         authorb: authorbook,
                         circul: circulation,
-                        numberpage: numberpages,
+                        numberPage: numberpages,
                         dateWrit: datewrit
                     };
                     $.ajax({
